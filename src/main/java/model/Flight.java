@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 public class Flight {
 
     // The primary key
@@ -10,17 +12,20 @@ public class Flight {
     private String airplaneCode; // The airplane for the flight
 
     // The flight's information
+    private Date flightDate;
     private Double flightPrice;
     private Integer passengerNo; // The passenger's number in this flight
     private String takeoffGate;
     private String landingGate;
     private String baggageCarrousel;
 
-    public Flight(String flightCode, Integer routeCode, String airplaneCode, Double flightPrice, Integer passengerNo,
-                  String takeoffGate, String landingGate, String baggageCarrousel) {
+    public Flight(String flightCode, Integer routeCode, String airplaneCode, Date flightDate,
+                  Double flightPrice, Integer passengerNo, String takeoffGate,
+                  String landingGate, String baggageCarrousel) {
         this.flightCode = flightCode;
         this.routeCode = routeCode;
         this.airplaneCode = airplaneCode;
+        this.flightDate = flightDate;
         this.flightPrice = flightPrice;
         this.passengerNo = passengerNo;
         this.takeoffGate = takeoffGate;
@@ -91,4 +96,13 @@ public class Flight {
     public void setBaggageCarrousel(String baggageCarrousel) {
         this.baggageCarrousel = baggageCarrousel;
     }
+
+    public Date getFlightDate() {
+        return flightDate;
+    }
+
+    public void setFlightDate(Date flightDate) {
+        this.flightDate = flightDate;
+    }
+
 }
