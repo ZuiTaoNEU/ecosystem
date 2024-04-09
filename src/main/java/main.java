@@ -9,7 +9,7 @@ public class main {
         // Want to check flight's passenger's number.
         // Search 'Flight' from Database according to its primary key (flight code).
         // While the database is not connected now, use a dummy flight.
-        Flight flightCA1929 = new Flight("CA1929", 0, "CA982", new Date()
+        Flight flightCA1929 = new Flight("CA1929", 0, "CA982", new Date(), new Date()
                         ,999.92, 103, "JFK019", "PVG002", "19");
         System.out.println("Check flight's passenger's number:" + flightCA1929.getPassengerNo());
     }

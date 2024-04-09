@@ -12,20 +12,22 @@ public class Flight {
     private String airplaneCode; // The airplane for the flight
 
     // The flight's information
-    private Date flightDate;
+    private Date flightDepartureTime;
+    private Date flightArrivalTime;
     private Double flightPrice;
     private Integer passengerNo; // The passenger's number in this flight
     private String takeoffGate;
     private String landingGate;
     private String baggageCarrousel;
 
-    public Flight(String flightCode, Integer routeCode, String airplaneCode, Date flightDate,
-                  Double flightPrice, Integer passengerNo, String takeoffGate,
+    public Flight(String flightCode, Integer routeCode, String airplaneCode, Date flightArrivalTime,
+                  Date flightDepartureTime, Double flightPrice, Integer passengerNo, String takeoffGate,
                   String landingGate, String baggageCarrousel) {
         this.flightCode = flightCode;
         this.routeCode = routeCode;
         this.airplaneCode = airplaneCode;
-        this.flightDate = flightDate;
+        this.flightArrivalTime = flightArrivalTime;
+        this.flightDepartureTime = flightDepartureTime;
         this.flightPrice = flightPrice;
         this.passengerNo = passengerNo;
         this.takeoffGate = takeoffGate;
@@ -43,6 +45,22 @@ public class Flight {
 
     public Integer getRouteCode() {
         return routeCode;
+    }
+
+    public Date getFlightDepartureTime() {
+        return flightDepartureTime;
+    }
+
+    public void setFlightDepartureTime(Date flightDepartureTime) {
+        this.flightDepartureTime = flightDepartureTime;
+    }
+
+    public Date getFlightArrivalTime() {
+        return flightArrivalTime;
+    }
+
+    public void setFlightArrivalTime(Date flightArrivalTime) {
+        this.flightArrivalTime = flightArrivalTime;
     }
 
     public void setRouteCode(Integer routeCode) {
@@ -95,14 +113,6 @@ public class Flight {
 
     public void setBaggageCarrousel(String baggageCarrousel) {
         this.baggageCarrousel = baggageCarrousel;
-    }
-
-    public Date getFlightDate() {
-        return flightDate;
-    }
-
-    public void setFlightDate(Date flightDate) {
-        this.flightDate = flightDate;
     }
 
 }
